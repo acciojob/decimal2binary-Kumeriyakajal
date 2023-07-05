@@ -1,11 +1,15 @@
 function decimalToBinary(num) {
   //Write you code here
-  let num = 7;
-  while (num > 0) {
-    let remainder = decimal % 2;
-    binary = remainder + binary;
-    decimal = Math.floor(decimal / 2);
+  if (num === 0) {
+    return '0';
   }
+
+  let binary = '';
+  while (num > 0) {
+    binary = (num % 2) + binary;
+    num = Math.floor(num / 2);
+  }
+
   return binary;
 }
 
